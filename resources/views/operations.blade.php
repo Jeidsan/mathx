@@ -26,7 +26,7 @@
         <div class="row">
             @foreach ($exercises as $exercise)
                 <div class="col-3 display-6 mb3">
-                    <span class="badge bg-dark">{{ str_pad($exercise['exercise_number'], 2, '0', STR_PAD_LEFT) }}</span>
+                    <span class="badge bg-dark">{{ $exercise['exercise_number'] }}</span>
                     <span>{{ $exercise['exercise'] }}</span>
                 </div>
             @endforeach
@@ -49,7 +49,7 @@
 
     <!-- footer -->
     <footer class="text-center mt-5">
-        <p class="text-secondary">MathX &copy; <span class="text-info">{{ date('Y') }}</span></p>
+        <p class="text-secondary">{{ env('APP_NAME') }} &copy; <span class="text-info">{{ date('Y') }}</span></p>
     </footer>
 
     <!-- bootstrap -->
